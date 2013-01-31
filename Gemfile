@@ -39,5 +39,10 @@ gem 'jquery-rails'
 
 group :development do
   gem 'guard'
+  gem 'rb-fsevent', '~> 0.9.1', :require => false if RUBY_PLATFORM =~/darwin/i
+  gem 'rb-readline'
 end
 
+group :tools do
+  gem 'guard-test'
+end
